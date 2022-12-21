@@ -9,8 +9,12 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="banner-text">
-                        <strong class="para-light">We Deal</strong>
-                        <h1>New, Used & Imported Laptops</h1>
+                        <strong class="para-light">
+                            {{ __('home.we_deal') }}
+                        </strong>
+                        <h1>
+                            {{ __('home.banner_heading') }}
+                        </h1>
                         <p>A Magical and Revolutionary device at an unbelievable price. Does more, cost less & its that simple. A Magical and Revolutionary device at an unbelievable price. Does more, cost less & its that simpple.</p>
                     </div>
                 </div>

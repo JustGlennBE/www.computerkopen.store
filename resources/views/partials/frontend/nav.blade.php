@@ -18,10 +18,10 @@
                     <li><a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ route('frontend.contact') }}">Contact</a></li>
                     <li class="language">
                         <div class="switch">
-                            <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+                            <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox" {{ session()->get('locale') == 'nl' ? 'checked' : '' }}>
                             <label for="language-toggle"></label>
-                            <span class="on">NL</span>
-                            <span class="off">EN</span>
+                            <span class="on" id="en" data-url="{{ route('lang', 'en') }}">EN</span>
+                            <span class="off" id="nl" data-url="{{ route('lang', 'nl') }}">NL</span>
                         </div>
                     </li>
                     <span class="d-flex header-btn-wrap">
