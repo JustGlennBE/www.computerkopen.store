@@ -19,6 +19,13 @@ use App\Http\Controllers\UserController;
 
 Auth::routes(['verify' => true]);
 
+//Change Language
+Route::get('/language/{locale}', function ($locale) {
+    App::setLocale($locale);
+    session()->put('locale', $locale);
+    return redirect()->back();
+})->name('lang');
+
 //Email varification
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();

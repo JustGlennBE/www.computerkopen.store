@@ -6,6 +6,19 @@ $(document).ready(function(){
         $('#logout-form').submit();
     });
 
+    //Language change button js
+    $('#language-toggle').click(function(){
+        let lang = $("meta[name='lang']").attr("content");
+        if(lang == 'en'){
+            let url = $('#nl').data('url');
+            window.location.replace(url);
+        }else{
+            let url = $('#en').data('url');
+            window.location.replace(url);
+        }
+        console.log(lang);
+    });
+
 
 });
 var isActive = document.getElementById("nav");
